@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">PEER TO PEER LOAN</string>
+    <string name="app_pass">***********</string>
+    <string name="user">User Name</string>
+    <string name="btn_exit">Exit</string>
+    <string name="btn_admin">Login As Admin</string>
+    <string name="btn_fg">Forgot Password</string>
+    <string name="sign_btn">Sign Up</string>
+    <string name="lg_btn">Login</string>
+    <string name="app_id">user id</string>
+    <string name="app_peer">Welcome Peer To Peer Loan</string>
+    <string name="app_no">+254798877676</string>
+    <string name="pass">Password</string>
+    <string name="pass_conf">Confirm Password</string>
+    <string name="btn_female">Female</string>
+    <string name="btn_male">Male</string>
+    <string name="email">yourusername@gmail.com</string>
+    <string name="btn_save">Save</string>
+    <string name="app_full">Full Name</string>
+    <string name="app_admin">Admin Name</string>
+    <string name="app_new">New Password</string>
+    <string name="conf_new">Confirm New Password</string>
+    <string name="debt">Total Amount to Pay</string>
+    <string name="weeks">No of weeks to pay</string>
+    <string name="loan">Loan Amount</string>
+    <string name="btn_invest">Invest</string>
+    <string name="app_repay">Amount to be Repaid</string>
+    <string name="app_apply">Apply</string>
+    <string name="approve">Approve Loans</string>
+    <string name="students">Check Students Details</string>
+    <string name="app_lo">Check For Loanees</string>
+    <string name="Invest_Amount">Amount To Invest</string>
+    <string name="admin_id">Admin Id</string>
+    <string name="btn_proceed_invest">btn_proceed_invest</string>
+    <string name="proceed_to_invest">proceed to invest</string>
+
+</resources>

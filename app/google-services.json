@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "799640576262",
+    "firebase_url": "https://peer-to-peer-loan.firebaseio.com",
+    "project_id": "peer-to-peer-loan",
+    "storage_bucket": "peer-to-peer-loan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799640576262:android:151caae81f1bacc5",
+        "android_client_info": {
+          "package_name": "com.alfredtechsystems.myapplication2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799640576262-080pnci1r2sajvv5rivsjrlt24mdpnqb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alfredtechsystems.myapplication2",
+            "certificate_hash": "6f24d54e9bb9fb5daab3ed819fb57b72c8dc6a65"
+          }
+        },
+        {
+          "client_id": "799640576262-4l4jisnvgf5qnjf5m6dmpegdumnqdavi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2Cpp1Z7B8VxvXOR9m1zneLlmxGM6UnqE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799640576262-4l4jisnvgf5qnjf5m6dmpegdumnqdavi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

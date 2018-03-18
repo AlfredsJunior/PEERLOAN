@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.alfredtechsystems.myapplication2">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".signup" />
+        <activity android:name=".Admin_login" />
+        <activity android:name=".reset_password" />
+        <activity android:name=".home_user" />
+        <activity android:name=".user_invest" />
+        <activity android:name=".admin_home" />
+        <activity android:name="com.alfredtechsystems.myapplication2.adminRoles.Loanees" />
+        <activity android:name="com.alfredtechsystems.myapplication2.adminRoles.LoanersInvestors" />
+        <activity android:name="com.alfredtechsystems.myapplication2.adminRoles.StudentsDetails" />
+        <activity android:name="com.alfredtechsystems.myapplication2.adminRoles.LoanApproveAdmin"></activity>
+    </application>
+
+</manifest>

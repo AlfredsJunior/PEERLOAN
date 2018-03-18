@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.alfredtechsystems.myapplication2.user_invest">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="@string/app_peer" />
+
+    <EditText
+        android:id="@+id/edittextAmountToInvest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="@string/Invest_Amount"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editTextInvestweeks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/edittextAmountToInvest"
+        android:layout_below="@+id/edittextAmountToInvest"
+        android:layout_marginTop="62dp"
+        android:ems="10"
+        android:hint="@string/weeks"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/txtviewAmountTobeRePaid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextInvestweeks"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:ems="10"
+        android:hint="@string/app_repay"
+        tools:ignore="InvalidId" />
+
+    <Button
+        android:id="@+id/buttonInvest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignStart="@+id/txtviewAmountTobeRePaid"
+        android:layout_marginBottom="87dp"
+        android:hint="click to invest"/>
+</RelativeLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.alfredtechsystems.myapplication2.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/button_exit"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:text="@string/app_peer" />
+
+    <EditText
+        android:id="@+id/editText_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginEnd="73dp"
+        android:layout_marginTop="38dp"
+        android:ems="10"
+        android:hint="@string/user"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editText_userid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editText_username"
+        android:layout_below="@+id/editText_username"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/app_id"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editText_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editText_userid"
+        android:layout_below="@+id/editText_userid"
+        android:layout_marginTop="39dp"
+        android:ems="10"
+        android:hint="@string/app_pass"
+        android:inputType="textPassword"/>
+
+    <Button
+        android:id="@+id/button_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_forgotpassword"
+        android:layout_marginBottom="19dp"
+        android:layout_marginEnd="14dp"
+        android:layout_toStartOf="@+id/button_forgotpassword"
+        android:text="@string/btn_exit" />
+
+    <Button
+        android:id="@+id/button_loginasuser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_exit"
+        android:layout_alignBottom="@+id/button_exit"
+        android:layout_alignEnd="@+id/signup_button"
+        android:layout_marginEnd="30dp"
+        android:text="@string/lg_btn" />
+
+    <Button
+        android:id="@+id/button_forgotpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:text="@string/btn_fg" />
+
+    <Button
+        android:id="@+id/signup_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/sign_btn" />
+
+    <Button
+        android:id="@+id/button_loginasAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/button_forgotpassword"
+        android:layout_below="@+id/editText_password"
+        android:layout_marginTop="22dp"
+        android:text="@string/btn_admin" />
+</RelativeLayout>

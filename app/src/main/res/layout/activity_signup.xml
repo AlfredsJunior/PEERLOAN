@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.alfredtechsystems.myapplication2.signup">
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/app_peer" />
+
+    <EditText
+        android:id="@+id/editText_fullname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView3"
+        android:layout_marginStart="72dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/app_full" />
+
+    <EditText
+        android:id="@+id/editText_signup_Id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editText_fullname"
+        android:layout_below="@+id/editText_fullname"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="@string/app_id"/>
+
+    <EditText
+        android:id="@+id/editText6_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editText_signup_Id"
+        android:layout_below="@+id/editText_signup_Id"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress" />
+
+    <RadioButton
+        android:id="@+id/radioButton_male"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editText6_email"
+        android:layout_below="@+id/editText6_email"
+        android:layout_marginTop="14dp"
+        android:text="@string/btn_male" />
+
+    <RadioButton
+        android:id="@+id/RadioButton_Female"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editTextPhoneNo"
+        android:layout_alignEnd="@+id/textView3"
+        android:layout_marginEnd="20dp"
+        android:text="@string/btn_female" />
+
+    <EditText
+        android:id="@+id/editTextPhoneNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/radioButton_male"
+        android:layout_below="@+id/radioButton_male"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:hint="@string/app_no"
+        android:inputType="number"
+        tools:ignore="TextFields" />
+
+    <EditText
+        android:id="@+id/editText_signup_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editTextPhoneNo"
+        android:layout_below="@+id/editTextPhoneNo"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:hint="@string/app_pass"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/editText_ConfRegPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editText_signup_password"
+        android:layout_below="@+id/editText_signup_password"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/pass_conf"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/buttonRegisterSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_marginBottom="14dp"
+        android:layout_marginStart="21dp"
+        android:text="@string/btn_save" />
+</RelativeLayout>
