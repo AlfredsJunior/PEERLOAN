@@ -1,8 +1,9 @@
-package com.alfredtechsystems.myapplication2.db;
+package com.alfredtechsystems.myapplication2.db.dbModel;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
 
 /**
  * Created by getab on 3/20/2018.
@@ -11,14 +12,15 @@ import android.arch.persistence.room.PrimaryKey;
 @Entity
 public class User {
     @PrimaryKey
+    @NonNull
     @ColumnInfo(name = "user_id")
-    String userId;
+    public int userId;
     @ColumnInfo(name = "user_name")
-    String userName;
+    public String userName;
     @ColumnInfo(name = "user_password")
-    String userPassword;
+    public String userPassword;
     String userEmail;
-    int gender;
-    long phoneNumber;
-    boolean isAdmin;
+    public int gender;
+    public long phoneNumber;
+    public boolean isAdmin;
 }

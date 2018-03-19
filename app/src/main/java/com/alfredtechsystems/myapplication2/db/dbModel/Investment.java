@@ -1,9 +1,13 @@
-package com.alfredtechsystems.myapplication2.db;
+package com.alfredtechsystems.myapplication2.db.dbModel;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.PrimaryKey;
+import android.arch.persistence.room.TypeConverters;
+import android.support.annotation.NonNull;
+
+import java.util.Date;
 
 /**
  * Created by getab on 3/20/2018.
@@ -15,9 +19,12 @@ import android.arch.persistence.room.PrimaryKey;
                 childColumns = "fk_user_id")})
 public class Investment {
     @PrimaryKey
+    @NonNull
     @ColumnInfo(name = "invest_id")
-    String investId;
+    public String investId;
     @ColumnInfo(name = "fk_user_id")
-    String userId;
-    double investAmount;
+    public String userId;
+    public double investAmount;
+    @TypeConverters(DateConverter.class)
+    public Date invesmentDate;
 }

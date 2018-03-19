@@ -1,9 +1,10 @@
-package com.alfredtechsystems.myapplication2.db;
+package com.alfredtechsystems.myapplication2.db.dbModel;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
 
 /**
  * Created by getab on 3/20/2018.
@@ -15,11 +16,12 @@ import android.arch.persistence.room.PrimaryKey;
                 childColumns = "admin_id")})
 public class AdminUser {
     @PrimaryKey
+    @NonNull
     @ColumnInfo(name = "admin_id")
-    String adminId;
+    public String adminId;
     @ColumnInfo(name = "admin_name")
-    String adminName;
+    public String adminName;
     @ColumnInfo(name = "admin_password")
-    String adminPassword;
+    public String adminPassword;
 
 }

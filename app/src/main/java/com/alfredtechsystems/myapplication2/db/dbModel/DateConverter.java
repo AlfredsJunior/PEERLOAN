@@ -1,4 +1,4 @@
-package com.alfredtechsystems.myapplication2.db;
+package com.alfredtechsystems.myapplication2.db.dbModel;
 
 import android.arch.persistence.room.TypeConverter;
 

@@ -1,10 +1,13 @@
-package com.alfredtechsystems.myapplication2.db;
+package com.alfredtechsystems.myapplication2.db.dbModel;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.PrimaryKey;
 import android.arch.persistence.room.TypeConverters;
+import android.support.annotation.NonNull;
+
+import java.util.Date;
 
 /**
  * Created by getab on 3/20/2018.
@@ -14,12 +17,14 @@ import android.arch.persistence.room.TypeConverters;
         @ForeignKey(entity = User.class,
                 parentColumns = "user_id",
                 childColumns = "fk_user_id")})
-@TypeConverters(DateConverter.class)
 public class Loan {
     @PrimaryKey
+    @NonNull
     @ColumnInfo(name = "loan_id")
-    String loanId;
+    public String loanId;
     @ColumnInfo(name = "fk_user_id")
-    String userId;
-    double loanAmount;
+    public String userId;
+    public double loanAmount;
+    @TypeConverters(DateConverter.class)
+    public Date loanDate;
 }
