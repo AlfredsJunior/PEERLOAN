@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.alfredtechsystems.myapplication2.signup">
 
 
@@ -18,62 +17,75 @@
 
     <EditText
         android:id="@+id/editText_fullname"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView3"
-        android:layout_marginStart="72dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/app_full" />
+        android:hint="@string/app_full"
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/editText_signup_Id"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/editText_fullname"
         android:layout_below="@+id/editText_fullname"
-        android:layout_marginTop="15dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
-        android:inputType="number"
-        android:hint="@string/app_id"/>
+        android:hint="@string/app_id"
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/editText6_email"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/editText_signup_Id"
         android:layout_below="@+id/editText_signup_Id"
-        android:layout_marginTop="11dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textEmailAddress" />
 
-    <RadioButton
-        android:id="@+id/radioButton_male"
-        android:layout_width="wrap_content"
+    <RadioGroup
+        android:id="@+id/radio"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/editText6_email"
         android:layout_below="@+id/editText6_email"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="14dp"
-        android:text="@string/btn_male" />
+        android:orientation="horizontal"
+        android:padding="4dp">
 
-    <RadioButton
-        android:id="@+id/RadioButton_Female"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editTextPhoneNo"
-        android:layout_alignEnd="@+id/textView3"
-        android:layout_marginEnd="20dp"
-        android:text="@string/btn_female" />
+        <RadioButton
+            android:id="@+id/radioButton_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_weight="1"
+            android:text="@string/btn_male" />
+
+        <RadioButton
+            android:id="@+id/RadioButton_Female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:text="@string/btn_female" />
+    </RadioGroup>
 
     <EditText
         android:id="@+id/editTextPhoneNo"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/radioButton_male"
-        android:layout_below="@+id/radioButton_male"
-        android:layout_marginTop="17dp"
+        android:layout_below="@+id/radio"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/app_no"
         android:inputType="number"
@@ -81,33 +93,37 @@
 
     <EditText
         android:id="@+id/editText_signup_password"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/editTextPhoneNo"
         android:layout_below="@+id/editTextPhoneNo"
-        android:layout_marginTop="13dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/app_pass"
         android:inputType="textPassword" />
 
     <EditText
         android:id="@+id/editText_ConfRegPass"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/editText_signup_password"
         android:layout_below="@+id/editText_signup_password"
-        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/pass_conf"
         android:inputType="textPassword" />
 
     <Button
         android:id="@+id/buttonRegisterSave"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/textView3"
-        android:layout_marginBottom="14dp"
-        android:layout_marginStart="21dp"
-        android:text="@string/btn_save" />
+        android:layout_margin="8dp"
+        android:background="@drawable/button_selector"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="@string/btn_save"/>
 </RelativeLayout>
