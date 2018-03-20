@@ -3,7 +3,6 @@ package com.alfredtechsystems.myapplication2.db.dbDao;
 import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;
-import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 import android.arch.persistence.room.Update;
@@ -26,8 +25,8 @@ public interface InvestmentDao {
     LiveData<List<Investment>> loadAllInvestMents();
 
     @Query("SELECT * FROM Investment" +
-            "INNER JOIN user.user_id == Investment.fk_user_id" +
-            "WHERE User.user_name == :username ")
+            " INNER JOIN user ON user_id == fk_user_id" +
+            " WHERE user_name == :username")
     LiveData<List<Investment>> loadInvestMentsByUser(String username);
 
     @Update(onConflict = REPLACE)
