@@ -25,7 +25,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:ems="10"
-        android:hint="@string/loan"
+        android:hint="@string/loanCalculator"
         android:inputType="number" />
 
     <EditText

@@ -1,18 +1,16 @@
 package com.alfredtechsystems.myapplication2;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.alfredtechsystems.myapplication2.model.Loan;
-import com.alfredtechsystems.myapplication2.model.LoanUtil;
+import com.alfredtechsystems.myapplication2.model.LoanCalculator;
+import com.alfredtechsystems.myapplication2.model.LoanCalculatorUtil;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -48,7 +46,7 @@ public class home_user extends AppCompatActivity {
     @OnClick(R.id.btn_apply)
     public void btn_applyClick() {
         if (TextUtils.isEmpty(loan_amount.getText())) {
-            loan_amount.setError("Enter Loan amount");
+            loan_amount.setError("Enter LoanCalculator amount");
             return;
         }
         if (TextUtils.isEmpty(applyWeeks.getText())) {
@@ -56,10 +54,10 @@ public class home_user extends AppCompatActivity {
             return;
         }
 
-        Loan loan = new Loan(Double.parseDouble(String.valueOf(loan_amount.getText())), Integer.parseInt(String.valueOf(applyWeeks.getText())), 0.075);
+        LoanCalculator loanCalculator = new LoanCalculator(Double.parseDouble(String.valueOf(loan_amount.getText())), Integer.parseInt(String.valueOf(applyWeeks.getText())), 0.075);
         Toast.makeText(this, "Successfully applied ", Toast.LENGTH_SHORT).show();
 
-        LoanUtil loanUtil = new LoanUtil(loan, true);
+        LoanCalculatorUtil loanUtil = new LoanCalculatorUtil(loanCalculator, true);
 
         amountToPay.setText("Congrats you've approved for " + loanUtil.loanAmountApproved());
 

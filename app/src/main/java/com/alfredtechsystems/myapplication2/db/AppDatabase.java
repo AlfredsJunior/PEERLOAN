@@ -1,11 +1,13 @@
 package com.alfredtechsystems.myapplication2.db;
 
-import android.arch.persistence.db.SupportSQLiteOpenHelper;
+import android.arch.persistence.db.SupportSQLiteDatabase;
 import android.arch.persistence.room.Database;
-import android.arch.persistence.room.DatabaseConfiguration;
-import android.arch.persistence.room.InvalidationTracker;
 import android.arch.persistence.room.RoomDatabase;
+import android.arch.persistence.room.migration.Migration;
+import android.support.annotation.NonNull;
 
+import com.alfredtechsystems.myapplication2.db.dbDao.InvestmentDao;
+import com.alfredtechsystems.myapplication2.db.dbDao.UserDao;
 import com.alfredtechsystems.myapplication2.db.dbModel.AdminUser;
 import com.alfredtechsystems.myapplication2.db.dbModel.Investment;
 import com.alfredtechsystems.myapplication2.db.dbModel.Loan;
@@ -19,14 +21,18 @@ import com.alfredtechsystems.myapplication2.db.dbModel.User;
 
 @Database(entities = {User.class,AdminUser.class,Investment.class,
         Loan.class,MoneyTransaction.class,PeerLoanAccount.class},version = 1)
-public class AppDatabase extends RoomDatabase {
-    @Override
-    protected SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration config) {
-        return null;
-    }
+public abstract class AppDatabase extends RoomDatabase {
+    private static AppDatabase INSTANCE;
 
-    @Override
-    protected InvalidationTracker createInvalidationTracker() {
-        return null;
-    }
+    //abstract methods for our Daos
+    public abstract UserDao UserModel();
+    public abstract InvestmentDao InvestmentModel();
+
+    static final Migration MIGRATION_1_2 = new Migration(1, 2) {
+        @Override
+        public void migrate(@NonNull SupportSQLiteDatabase database) {
+            // Since we didn't alter the table, there's nothing else to do here.
+            //This illustrates migration of databases.
+        }
+    };
 }

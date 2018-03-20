@@ -4,16 +4,16 @@ package com.alfredtechsystems.myapplication2.model;
  * Created by alphie on 3/15/2018.
  */
 
-public class Loan {
+public class LoanCalculator {
 
     private double principle;
     private double noOfWeeks;
     private double rate;
 
-    public Loan(){
+    public LoanCalculator(){
 
     }
-    public Loan(double principle, double noOfWeeks, double rate){
+    public LoanCalculator(double principle, double noOfWeeks, double rate){
         this.noOfWeeks = noOfWeeks;
         this.principle = principle;
         this.rate = rate;
