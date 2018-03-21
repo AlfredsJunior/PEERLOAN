@@ -60,6 +60,9 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         //init viewmodel
         viewModel = ViewModelProviders.of(this).get(MainActivityViewModel.class);
+        //null pointer exception on database data retrieve on this two functions have commeted for further debugging
+        //Happy coding
+
         //fetchUsers();
         //fetchAdmins();
 
@@ -71,7 +74,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onChanged(@Nullable List<User> users) {
-                doLogin = performLogin(users);
+
+                //doLogin = performLogin(users);
+                //mUsers = users;
             }
         });
     }
@@ -79,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         viewModel.getmAdminUsers().observe(this, new Observer<List<AdminUser>>() {
             @Override
             public void onChanged(@Nullable List<AdminUser> adminUsers) {
+                //null pointer exception on database data
                 //mAdminUsers = adminUsers;
             }
         });
@@ -119,13 +125,14 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        if (performLogin(viewModel.getmUsers().getValue())) {
-            Intent intent = new Intent(this, home_user.class);
-            finish();
-            startActivity(intent);
-        } else{
-            Toast.makeText(this, "Wrong username, id or Password!", Toast.LENGTH_SHORT).show();
-        }
+        // if (performLogin(viewModel.getmUsers().getValue())) {
+        //     Intent intent = new Intent(this, home_user.class);
+        //     finish();
+        //     startActivity(intent);
+        // } else{
+        //     Toast.makeText(this, "Wrong username, id or Password!", Toast.LENGTH_SHORT).show();
+        // }
+         Toast.makeText(this, "Wrong username, id or Password!", Toast.LENGTH_SHORT).show();
     }
 
     private Boolean performLogin(List<User> mUsers){
@@ -138,7 +145,11 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         }
+
         return false;
+       Intent intent = new Intent(this, home_user.class);
+       //finish();
+       startActivity(intent);
     }
 
     @OnClick(R.id.button_forgotpassword)
