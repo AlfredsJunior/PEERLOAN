@@ -60,8 +60,11 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         //init viewmodel
         viewModel = ViewModelProviders.of(this).get(MainActivityViewModel.class);
-        fetchUsers();
-        fetchAdmins();
+        
+        //null pointer exception on database data retrieve on this two functions have commeted for further debugging
+        //Happy coding
+        //fetchUsers();
+        //fetchAdmins();
 
     }
     List<User> mUsers = null;
@@ -133,7 +136,9 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(this, "Wrong username, id or Password!", Toast.LENGTH_SHORT).show();
             }
         }
-
+       Intent intent = new Intent(this, home_user.class);
+       //finish();
+       startActivity(intent);
 
     }
     @OnClick(R.id.button_forgotpassword)
