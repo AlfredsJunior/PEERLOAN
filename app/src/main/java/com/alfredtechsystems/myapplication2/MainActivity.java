@@ -75,9 +75,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onChanged(@Nullable List<User> users) {
-                mUsers = users;
+                
+                //mUsers = users;
 
-                headerViewText.setText(users.get(0).userName);
             }
         });
     }
@@ -85,7 +85,8 @@ public class MainActivity extends AppCompatActivity {
         viewModel.getmAdminUsers().observe(this, new Observer<List<AdminUser>>() {
             @Override
             public void onChanged(@Nullable List<AdminUser> adminUsers) {
-                mAdminUsers = adminUsers;
+                //null pointer exception on database data
+                //mAdminUsers = adminUsers;
             }
         });
     }
