@@ -60,21 +60,18 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         //init viewmodel
         viewModel = ViewModelProviders.of(this).get(MainActivityViewModel.class);
-        fetchUsers();
-        fetchAdmins();
+        //fetchUsers();
+        //fetchAdmins();
 
     }
-    List<User> mUsers = null;
-    List<AdminUser> mAdminUsers;
+    Boolean doLogin;
 
     void fetchUsers(){
         viewModel.getmUsers().observe(this, new Observer<List<User>>() {
 
             @Override
             public void onChanged(@Nullable List<User> users) {
-                mUsers = users;
-
-                headerViewText.setText(users.get(0).userName);
+                doLogin = performLogin(users);
             }
         });
     }
@@ -82,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         viewModel.getmAdminUsers().observe(this, new Observer<List<AdminUser>>() {
             @Override
             public void onChanged(@Nullable List<AdminUser> adminUsers) {
-                mAdminUsers = adminUsers;
+                //mAdminUsers = adminUsers;
             }
         });
     }
@@ -122,20 +119,28 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        if (mUsers != null){
-            for (User user : mUsers){
-                if (userName.getText().equals(user.userName) & userId.getText().equals(user.userId)){
+        if (performLogin(viewModel.getmUsers().getValue())) {
+            Intent intent = new Intent(this, home_user.class);
+            finish();
+            startActivity(intent);
+        } else{
+            Toast.makeText(this, "Wrong username, id or Password!", Toast.LENGTH_SHORT).show();
+        }
+    }
 
-                    Intent intent = new Intent(this, home_user.class);
-                    //finish();
-                    startActivity(intent);
-                }else
-                    Toast.makeText(this, "Wrong username, id or Password!", Toast.LENGTH_SHORT).show();
+    private Boolean performLogin(List<User> mUsers){
+        for (User user : mUsers) {
+            if (userName.getText().equals(user.userName) &&
+                    userId.getText().equals(user.userId) &&
+                    editPassword.getText().equals(user.userPassword)) {
+                return true;
+            } else {
+                return false;
             }
         }
-
-
+        return false;
     }
+
     @OnClick(R.id.button_forgotpassword)
     public  void setForgotPassword(){
         Intent j = new Intent(this, reset_password.class);
@@ -144,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.signup_button)
     public  void signUpPage(){
-        Intent j = new Intent(this, signup.class);
+        Intent j = new Intent(this, SignupActivity.class);
         startActivity(j);
     }
 

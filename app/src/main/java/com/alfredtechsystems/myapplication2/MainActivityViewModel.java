@@ -22,14 +22,12 @@ public class MainActivityViewModel extends AndroidViewModel {
     private AppDatabase db;
     private static LiveData<List<User>> mUsers;
     private static LiveData<List<AdminUser>> mAdminUsers;
-
+    public static final String TAG = "MainActivityViewModel";
 
     public MainActivityViewModel(@NonNull Application application) {
         super(application);
 
         db = AppDatabase.getPeerLoanDatabase(this.getApplication());
-        mUsers = db.userModel().loadAllUsers();
-
         //initializes our users & admins
         PopulateAsync populateAsync = new PopulateAsync(db);
         populateAsync.execute();
@@ -37,6 +35,17 @@ public class MainActivityViewModel extends AndroidViewModel {
 
     public LiveData<List<User>> getmUsers() {
         return mUsers;
+    }
+
+    public void insertAdminUser(User user){
+        new AddAdmin(user).execute();
+
+    }
+
+    User retUser;
+    public User userById(long userid){
+        new AddAdmin(userid).execute();
+        return retUser;
     }
 
     public LiveData<List<AdminUser>> getmAdminUsers() {
@@ -57,7 +66,36 @@ public class MainActivityViewModel extends AndroidViewModel {
 
             mUsers = mDb.userModel().loadAllUsers();
             mAdminUsers = mDb.adminUserModel().loadAllAdmins();
+
+
             return null;
+        }
+    }
+
+
+    private class AddAdmin extends AsyncTask<Void,Void,Void> {
+        User user;
+        User user2;
+        long userid;
+        public AddAdmin(User user) {
+            this.user = user;
+        }
+
+        public AddAdmin(long userid) {
+            this.userid = userid;
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+
+            db.userModel().insertUser(user);
+            user2 = db.userModel().loadUserById(userid).getValue();
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            retUser = user2;
         }
     }
 }
