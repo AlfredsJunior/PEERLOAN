@@ -16,19 +16,19 @@ import static android.arch.persistence.room.OnConflictStrategy.IGNORE;
 import static android.arch.persistence.room.OnConflictStrategy.REPLACE;
 
 /**
- * Created by getab on 3/20/2018.
+ * Created by Alfred on 3/20/2018.
  */
 
 @Dao
 public interface InvestmentDao {
 
     @Query("select * from Investment")
-    LiveData<List<Investment>> loadAllInvestMents();
+    LiveData<List<Investment>> loadAllInvestments();
 
-    @Query("SELECT * FROM Investment" +
-            "INNER JOIN user.user_id == Investment.fk_user_id" +
+    @Query(value = "SELECT * FROM Investment," +
+            "INNERJOIN User.user_id==Investment.fk_user_id" +
             "WHERE User.user_name == :username ")
-    LiveData<List<Investment>> loadInvestMentsByUser(String username);
+    LiveData<List<Investment>> loadInvestmentsByUser(String username);
 
     @Update(onConflict = REPLACE)
     void updateMyInvestment(Investment investment);

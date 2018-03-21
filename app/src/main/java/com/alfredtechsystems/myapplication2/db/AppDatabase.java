@@ -16,7 +16,7 @@ import com.alfredtechsystems.myapplication2.db.dbModel.PeerLoanAccount;
 import com.alfredtechsystems.myapplication2.db.dbModel.User;
 
 /**
- * Created by getab on 3/18/2018.
+ * Created by Alfred on 3/18/2018.
  */
 
 @Database(entities = {User.class,AdminUser.class,Investment.class,
@@ -24,7 +24,7 @@ import com.alfredtechsystems.myapplication2.db.dbModel.User;
 public abstract class AppDatabase extends RoomDatabase {
     private static AppDatabase INSTANCE;
 
-    //abstract methods for our Daos
+    //abstract methods for  Daos
     public abstract UserDao UserModel();
     public abstract InvestmentDao InvestmentModel();
 

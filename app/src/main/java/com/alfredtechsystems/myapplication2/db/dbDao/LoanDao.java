@@ -23,7 +23,7 @@ public interface LoanDao {
     LiveData<List<Loan>> loadAllLoans();
 
     @Query("SELECT * FROM Investment" +
-            "INNER JOIN user.user_id == Investment.fk_user_id" +
+            "INNER JOIN user.user_id  = = Investment.fk_user_id" +
             "WHERE User.user_name == :username ")
     LiveData<List<Investment>> loadInvestMentsByUser(String username);
 

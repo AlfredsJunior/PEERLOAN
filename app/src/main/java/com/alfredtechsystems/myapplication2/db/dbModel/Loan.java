@@ -10,7 +10,7 @@ import android.support.annotation.NonNull;
 import java.util.Date;
 
 /**
- * Created by getab on 3/20/2018.
+ * Created by Alfred on 3/20/2018.
  */
 
 @Entity(foreignKeys = {
