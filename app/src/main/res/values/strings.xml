@@ -22,7 +22,7 @@
     <string name="conf_new">Confirm New Password</string>
     <string name="debt">Total Amount to Pay</string>
     <string name="weeks">No of weeks to pay</string>
-    <string name="loan">Loan Amount</string>
+    <string name="loanCalculator">Loan Amount</string>
     <string name="btn_invest">Invest</string>
     <string name="app_repay">Amount to be Repaid</string>
     <string name="app_apply">Apply</string>

@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ButterKnife.bind(this);
+
+
     }
 
     @OnClick(R.id.button_loginasAdmin)
@@ -53,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.button_exit)
     public void exitClick(){
-        onDestroy();
+        finish();
     }
 
     @Override
@@ -87,6 +89,12 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.button_forgotpassword)
     public  void setForgotPassword(){
         Intent j = new Intent(this, reset_password.class);
+        startActivity(j);
+    }
+
+    @OnClick(R.id.signup_button)
+    public  void signUpPage(){
+        Intent j = new Intent(this, signup.class);
         startActivity(j);
     }
 

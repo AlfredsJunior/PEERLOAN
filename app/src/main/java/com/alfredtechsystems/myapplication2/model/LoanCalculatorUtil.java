@@ -4,23 +4,23 @@ package com.alfredtechsystems.myapplication2.model;
  * Created by alphie on 3/15/2018.
  */
 
-public class LoanUtil extends Loan implements Loan.loanCalculator {
+public class LoanCalculatorUtil extends LoanCalculator implements LoanCalculator.loanCalculator {
 
 
-    Loan loan;
+    LoanCalculator loanCalculator;
     Boolean approve;
 
-    public LoanUtil(Loan loan){
+    public LoanCalculatorUtil(LoanCalculator loanCalculator){
 
     }
-    public LoanUtil(Loan loan, Boolean Invest){
-        this.loan = loan;
+    public LoanCalculatorUtil(LoanCalculator loanCalculator, Boolean Invest){
+        this.loanCalculator = loanCalculator;
         this.approve = Invest;
     }
 
     @Override
     public double loanEngine() {
-        return loan.getPrinciple() + (loan.getPrinciple() * loan.getNoOfWeeks() * loan.getRate());
+        return loanCalculator.getPrinciple() + (loanCalculator.getPrinciple() * loanCalculator.getNoOfWeeks() * loanCalculator.getRate());
     }
 
     @Override
