@@ -4,6 +4,7 @@ import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 
 /**
  * Created by Alfred on 3/20/2018.
@@ -14,13 +15,17 @@ public class User {
     @PrimaryKey
     @NonNull
     @ColumnInfo(name = "user_id")
-    public int userId;
+    public long userId;
     @ColumnInfo(name = "user_name")
     public String userName;
     @ColumnInfo(name = "user_password")
     public String userPassword;
-    String userEmail;
+    @Nullable
+    public String userEmail;
+    @Nullable
     public int gender;
+    @Nullable
     public long phoneNumber;
+    @Nullable
     public boolean isAdmin;
 }

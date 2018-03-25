@@ -1,11 +1,22 @@
 package com.alfredtechsystems.myapplication2;
 
+import android.arch.lifecycle.Observer;
+import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.alfredtechsystems.myapplication2.db.AppDatabase;
+import com.alfredtechsystems.myapplication2.db.dbModel.AdminUser;
+import com.alfredtechsystems.myapplication2.db.dbModel.User;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -17,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
     Button signUpButton;
     @BindView(R.id.button_forgotpassword)
     Button forgotPassword;
+
+    @BindView(R.id.textView)
+    TextView headerViewText;
 
     @BindView(R.id.button_loginasAdmin)
     Button loginAsAdmin;
@@ -36,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.editText_username)
     EditText userName;
 
+    private MainActivityViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +58,36 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ButterKnife.bind(this);
+        //init viewmodel
+        viewModel = ViewModelProviders.of(this).get(MainActivityViewModel.class);
+        //null pointer exception on database data retrieve on this two functions have commeted for further debugging
+        //Happy coding
 
+        //fetchUsers();
+        //fetchAdmins();
 
+    }
+    Boolean doLogin;
+
+    void fetchUsers(){
+        viewModel.getmUsers().observe(this, new Observer<List<User>>() {
+
+            @Override
+            public void onChanged(@Nullable List<User> users) {
+
+                //doLogin = performLogin(users);
+                //mUsers = users;
+            }
+        });
+    }
+    void fetchAdmins(){
+        viewModel.getmAdminUsers().observe(this, new Observer<List<AdminUser>>() {
+            @Override
+            public void onChanged(@Nullable List<AdminUser> adminUsers) {
+                //null pointer exception on database data
+                //mAdminUsers = adminUsers;
+            }
+        });
     }
 
     @OnClick(R.id.button_loginasAdmin)
@@ -60,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
+        AppDatabase.destroyPeerLoanDb();
         super.onDestroy();
     }
 
@@ -81,11 +125,33 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-
-        Intent intent = new Intent(this,home_user.class);
-        //finish();
-        startActivity(intent);
+        // if (performLogin(viewModel.getmUsers().getValue())) {
+        //     Intent intent = new Intent(this, home_user.class);
+        //     finish();
+        //     startActivity(intent);
+        // } else{
+        //     Toast.makeText(this, "Wrong username, id or Password!", Toast.LENGTH_SHORT).show();
+        // }
+         Toast.makeText(this, "Wrong username, id or Password!", Toast.LENGTH_SHORT).show();
     }
+
+    private Boolean performLogin(List<User> mUsers){
+        for (User user : mUsers) {
+            if (userName.getText().equals(user.userName) &&
+                    userId.getText().equals(user.userId) &&
+                    editPassword.getText().equals(user.userPassword)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        return false;
+       Intent intent = new Intent(this, home_user.class);
+       //finish();
+       startActivity(intent);
+    }
+
     @OnClick(R.id.button_forgotpassword)
     public  void setForgotPassword(){
         Intent j = new Intent(this, reset_password.class);
@@ -94,10 +160,8 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.signup_button)
     public  void signUpPage(){
-        Intent j = new Intent(this, signup.class);
+        Intent j = new Intent(this, SignupActivity.class);
         startActivity(j);
     }
-
-
 
 }
