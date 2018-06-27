@@ -1,31 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.alfredtechsystems.myapplication2">
+
+    <uses-sdk tools:overrideLibrary="android.support.design,com.google.android.gms,android.support.v7.cardview,android.support.compat,android.support.v7.recyclerview,android.support.graphics.drawable.animated,android.support.coreui,android.support.transition,android.support.coreutils,android.support.graphics.drawable,com.google.android.gms.tasks,android.support.mediacompat,com.google.android.gms.base,com.google.android.gms.maps,android.support.v7.appcompat,android.support.fragment,android.support.v4" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <!-- <uses-permission android:name="android.permission.RECEIVE_SMS" /> -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+
         <activity android:name=".SignupActivity" />
         <activity android:name=".Admin_login" />
         <activity android:name=".reset_password" />
         <activity android:name=".home_user" />
         <activity android:name=".user_invest" />
         <activity android:name=".admin_home" />
-        <activity android:name="com.alfredtechsystems.myapplication2.adminRoles.Loanees" />
-        <activity android:name="com.alfredtechsystems.myapplication2.adminRoles.LoanersInvestors" />
-        <activity android:name="com.alfredtechsystems.myapplication2.adminRoles.StudentsDetails" />
-        <activity android:name="com.alfredtechsystems.myapplication2.adminRoles.LoanApproveAdmin"></activity>
+        <activity android:name=".adminRoles.Loanees" />
+        <activity android:name=".adminRoles.LoanersInvestors" />
+        <activity android:name=".adminRoles.StudentsDetails" />
+        <activity android:name=".adminRoles.LoanApproveAdmin" />
+        <activity android:name=".add_loan" />
+        <activity android:name=".loan_application_details" />
+        <activity android:name=".base" />
+        <activity android:name=".branch" />
+        <activity android:name=".branches" />
+        <activity android:name=".emergency_loan" />
+        <activity android:name=".feedback" />
+        <activity android:name=".loan_application" />
+        <activity android:name=".loan_account" />
+        <activity android:name=".loan_product" />
+        <activity android:name=".loan_topup" />
+        <activity android:name=".location" />
+        <activity android:name=".log_in" />
+        <activity android:name=".maps" />
+        <activity android:name=".mobile_money" />
+        <activity android:name=".payments" />
+        <activity android:name=".register" />
+        <activity android:name=".securities" />
+        <activity android:name=".splash" />
+        <activity android:name=".start" />
+        <activity android:name=".start_tab" />
+        <activity android:name=".view_applications" />
+        <activity android:name=".view_loan" />
+        <activity android:name=".view_loans" />
+        <activity android:name=".app_bar_home"/>
+
+
+
+            <activity
+                android:name=".StartActivity"
+                android:theme="@style/AppTheme.NoActionBar" />
+            <activity
+                android:name=".LoginActivity"
+                android:theme="@style/AppTheme.NoActionBar" />
+            <activity
+                android:name=".SettingsActivity"
+                android:label="@string/title_activity_settings" />
+            <activity
+                android:name=".HomeActivity"
+                android:icon="@drawable/kendagorlogo"
+                android:label="@string/title_activity_home"
+                android:theme="@style/AppTheme.NoActionBar" />
+            <activity
+                android:name=".RegisterActivity"
+                android:label="@string/title_register"
+                android:parentActivityName=".StartActivity" />
+            <activity
+                android:name=".LocationActivity"
+                android:theme="@style/AppTheme.NoActionBar" />
+            <activity
+                android:name=".BranchActivity"
+                android:theme="@style/AppTheme.NoActionBar" />
+            <activity
+                android:name=".LoanApplicationActivity"
+                android:label="Loan Application"
+                android:theme="@style/AppTheme.NoActionBar" />
+            <activity
+                android:name=".ViewApplicationsActivity"
+                android:icon="@drawable/kendagorlogo"
+                android:label="Loan Applications"
+                android:parentActivityName=".HomeActivity" />
+            <activity
+                android:name=".ViewLoansActivity"
+                android:label="Loan Accounts"
+                android:theme="@style/AppTheme.NoActionBar" />
+            <activity
+                android:name=".LoanAccountActivity"
+                android:label="Account Activity"
+                android:parentActivityName=".HomeActivity" />
+            <activity
+                android:name=".MobileMoneyActivity"
+                android:label="Mobile Money"
+                android:parentActivityName=".HomeActivity"
+                android:theme="@style/AppTheme.NoActionBar" />
+            <activity
+                android:name=".SplashActivity"
+                android:theme="@style/AppTheme.NoActionBar">
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+            </activity>
+            <activity
+                android:name=".StartTabActivity"
+                android:label="@string/title_activity_start_tab"
+                android:theme="@style/AppTheme.NoActionBar" />
+
+            <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="@string/title_activity_maps" />
+
+            <activity
+                android:name=".MapsActivity"
+                android:label="@string/title_activity_maps" />
+            <activity
+                android:name=".ViewLoanActivity"
+                android:label="Loan Details"
+                android:parentActivityName=".ViewLoansActivity" />
+            <activity
+                android:name=".AddLoanActivity"
+                android:label="Add Loan"
+                android:parentActivityName=".ViewLoansActivity" />
+            <activity
+                android:name=".BaseActivity"
+                android:label="Loan Application"
+                android:parentActivityName=".HomeActivity" />
+            <activity
+                android:name=".FeedbackActivity"
+                android:label="Feedback"
+                android:parentActivityName=".HomeActivity"
+                android:theme="@style/AppTheme.NoActionBar" />
+            <activity
+                android:name=".SecuritiesActivity"
+                android:label="Securities"
+                android:parentActivityName=".HomeActivity"
+                android:theme="@style/AppTheme.NoActionBar" />
+            <activity
+                android:name=".ApplicationDetailsActivity"
+                android:label="Loan Application"
+                android:parentActivityName=".ViewApplicationsActivity" />
+            <activity
+                android:name=".LoanEmergencyActivity"
+                android:label="Emergency Loan"
+                android:parentActivityName=".HomeActivity"
+                android:theme="@style/AppTheme.NoActionBar" />
+            <activity
+                android:name=".LoanTopupActivity"
+                android:label="Top Up Loan"
+                android:parentActivityName=".HomeActivity"
+                android:theme="@style/AppTheme.NoActionBar" />
+            <activity
+                android:name=".LoanProductActivity"
+                android:label="Products"
+                android:parentActivityName=".HomeActivity"
+                android:theme="@style/AppTheme.NoActionBar" />
+            <activity
+                android:name=".BranchesActivity"
+                android:label="Branches"
+                android:parentActivityName=".HomeActivity"
+                android:theme="@style/AppTheme.NoActionBar" />
+            <activity
+                android:name=".PaymentsActivity"
+                android:label="Payments"
+                android:parentActivityName=".HomeActivity"
+                android:theme="@style/AppTheme.NoActionBar" />
+            <activity android:name=".AboutActivity"
+                android:label="About Us"
+                android:parentActivityName=".HomeActivity"
+                android:theme="@style/AppTheme.NoActionBar"/>
+
+
+
+
+
     </application>
 
 </manifest>

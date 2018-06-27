@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_new_loan"
+            android:icon="@drawable/ic_add_circle_outline_black_24dp"
+            android:title="New Loan" />
+        <item
+            android:id="@+id/nav_all_loans"
+            android:icon="@drawable/ic_attach_money_black_24dp"
+            android:title="Loans " />
+        <!--<item-->
+        <!--android:id="@+id/nav_payments"-->
+        <!--android:icon="@drawable/ic_payment_black_24dp"-->
+        <!--android:title="Payments" />-->
+        <!--<item-->
+        <!--android:id="@+id/nav_mobile_money"-->
+        <!--android:icon="@drawable/ic_smartphone_black_24dp"-->
+        <!--android:title="Mobile Money" />-->
+        <item
+            android:id="@+id/nav_securities"
+            android:icon="@drawable/ic_folder_open_black_24dp"
+            android:title="Security Documents" />
+        <item
+            android:id="@+id/nav_products"
+            android:icon="@drawable/ic_shopping_basket_black_24dp"
+            android:title="Loan Products" />
+        <item
+            android:id="@+id/nav_branches"
+            android:icon="@drawable/ic_account_balance_black_24dp"
+            android:title="Branches" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/ic_question_answer_black_24dp"
+            android:title="Feedback" />
+    </group>
+
+    <!--<item-->
+    <!--android:id="@+id/nav_settings"-->
+    <!--android:icon="@drawable/ic_settings_black_24dp"-->
+    <!--android:title="Settings" />-->
+    <item
+        android:id="@+id/nav_send_feedback"
+        android:icon="@drawable/ic_info_outline_black_24dp"
+        android:title="About" />
+
+
+</menu>

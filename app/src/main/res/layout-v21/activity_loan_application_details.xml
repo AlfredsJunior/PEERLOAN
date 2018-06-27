@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".loan_application_details">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/textPercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="69dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/textRemaining"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textPercentage"
+                android:layout_centerHorizontal="true"
+                android:maxWidth="200dp"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <com.hookedonplay.decoviewlib.DecoView
+                android:id="@+id/dynamicArcView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="10dp"
+                android:layout_marginTop="5dp" />
+
+            <View
+                android:id="@+id/lineView"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#ff0900"
+                android:paddingTop="0dp"
+                android:layout_below="@+id/dynamicArcView" />
+            <TextView
+                android:id="@+id/textStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:layout_below="@+id/lineView"
+                android:layout_centerHorizontal="true" />
+
+            <View
+                android:id="@+id/lineView1"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_alignParentStart="true"
+                android:background="#ff0900"
+                android:paddingTop="0dp"
+                android:layout_below="@+id/textStatus" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/lineView1"
+                android:weightSum="2"
+                android:id="@+id/linear11"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textAmnt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textAmnt"
+                    android:layout_alignStart="@+id/textAmnt"
+                    android:layout_marginTop="14dp"
+                    android:layout_weight="1"
+                    android:text="Loan Amount"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textAmntValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textDetails"
+                    android:layout_alignStart="@+id/textDetails"
+                    android:layout_below="@+id/textAccount"
+                    android:layout_marginTop="13dp"
+                    android:layout_weight="1"
+                    android:text="Loan Amount"
+                    android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/linear11"
+                android:weightSum="2"
+                android:id="@+id/linear12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textAmnt"
+                    android:layout_alignStart="@+id/textAmnt"
+                    android:layout_marginTop="14dp"
+                    android:layout_weight="1"
+                    android:text="Application Date"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textDateValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textDetails"
+                    android:layout_alignStart="@+id/textDetails"
+                    android:layout_below="@+id/textAccount"
+                    android:layout_marginTop="13dp"
+                    android:layout_weight="1"
+                    android:text="Date"
+                    android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/linear12"
+                android:weightSum="2"
+                android:id="@+id/linear13"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textTenure"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textAmnt"
+                    android:layout_alignStart="@+id/textAmnt"
+                    android:layout_marginTop="14dp"
+                    android:layout_weight="1"
+                    android:text="Loan Tenure"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textTenureValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textDetails"
+                    android:layout_alignStart="@+id/textDetails"
+                    android:layout_below="@+id/textAccount"
+                    android:layout_marginTop="13dp"
+                    android:layout_weight="1"
+                    android:text="Tenure"
+                    android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/linear13"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textAmnt"
+                    android:layout_alignStart="@+id/textAmnt"
+                    android:layout_marginTop="14dp"
+                    android:layout_weight="1"
+                    android:text="Loan Type"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textTypeValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textDetails"
+                    android:layout_alignStart="@+id/textDetails"
+                    android:layout_below="@+id/textAccount"
+                    android:layout_marginTop="13dp"
+                    android:layout_weight="1"
+                    android:text="Type"
+                    android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+            </LinearLayout>
+            <View
+                android:id="@+id/lineView2"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#ff0900"
+                android:paddingTop="0dp"
+                android:layout_below="@+id/linear14" />
+            <LinearLayout
+                android:id="@+id/linear15"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/lineView2"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textIncome"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textAmnt"
+                    android:layout_alignStart="@+id/textAmnt"
+                    android:layout_marginTop="14dp"
+                    android:layout_weight="1"
+                    android:text="Average Income"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textIncomeValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textDetails"
+                    android:layout_alignStart="@+id/textDetails"
+                    android:layout_below="@+id/textAccount"
+                    android:layout_marginTop="13dp"
+                    android:layout_weight="1"
+                    android:text="Income"
+                    android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/linear15"
+                android:weightSum="2"
+                android:id="@+id/linear16"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textExpense"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textAmnt"
+                    android:layout_alignStart="@+id/textAmnt"
+                    android:layout_marginTop="14dp"
+                    android:layout_weight="1"
+                    android:text="Average Expenses"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textExpValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textDetails"
+                    android:layout_alignStart="@+id/textDetails"
+                    android:layout_below="@+id/textAccount"
+                    android:layout_marginTop="13dp"
+                    android:layout_weight="1"
+                    android:text="Expense"
+                    android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/linear16"
+                android:weightSum="2"
+                android:id="@+id/linear17"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textCollateral"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textAmnt"
+                    android:layout_alignStart="@+id/textAmnt"
+                    android:layout_marginTop="14dp"
+                    android:layout_weight="1"
+                    android:text="Collateral Value"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textCollateralValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textDetails"
+                    android:layout_alignStart="@+id/textDetails"
+                    android:layout_below="@+id/textAccount"
+                    android:layout_marginTop="13dp"
+                    android:layout_weight="1"
+                    android:text="Value"
+                    android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/linear17"
+                android:weightSum="2"
+                android:id="@+id/linear18"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textAmnt"
+                    android:layout_alignStart="@+id/textAmnt"
+                    android:layout_marginTop="14dp"
+                    android:layout_weight="1"
+                    android:text="Address"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textAddressValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textDetails"
+                    android:layout_alignStart="@+id/textDetails"
+                    android:layout_below="@+id/textAccount"
+                    android:layout_marginTop="13dp"
+                    android:layout_weight="1"
+                    android:text="Value"
+                    android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear19"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/linear18"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textOps"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textAmnt"
+                    android:layout_alignStart="@+id/textAmnt"
+                    android:layout_marginTop="14dp"
+                    android:layout_weight="1"
+                    android:text="Length of Operations"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textOpsValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textDetails"
+                    android:layout_alignStart="@+id/textDetails"
+                    android:layout_below="@+id/textAccount"
+                    android:layout_marginTop="13dp"
+                    android:layout_weight="1"
+                    android:text="Value"
+                    android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+            </LinearLayout>
+            <View
+                android:id="@+id/lineView3"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#ff0900"
+                android:paddingTop="0dp"
+                android:layout_below="@+id/linear19" />
+
+            <TextView
+                android:id="@+id/textInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/lineView3"
+                android:layout_marginTop="5dp"
+                android:text="Details"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtInfoValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textInfo"
+                android:layout_marginTop="5dp"
+                android:text="Loan Type"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

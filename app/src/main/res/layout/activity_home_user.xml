@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/relative"
+    android:background="@drawable/money_love_shape"
     tools:context="com.alfredtechsystems.myapplication2.home_user">
+
+
 
 
     <TextView
@@ -15,7 +17,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="@string/app_peer" />
+        android:text="@string/app_peer"
+        android:layout_alignParentLeft="true"/>
 
     <EditText
         android:id="@+id/editText_loan_amount"
@@ -41,31 +44,45 @@
 
     <Button
         android:id="@+id/btn_apply"
-        android:layout_width="wrap_content"
+        android:layout_width="222dp"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/textView2"
         android:layout_centerVertical="true"
-        android:text="@string/app_apply" />
+        android:layout_marginEnd="-125dp"
+        android:layout_marginLeft="80dp"
+        android:background="@drawable/button_selector"
+        android:text="@string/app_apply"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/amount_topay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="228dp"
+        android:layout_height="25dp"
         android:layout_above="@+id/button_invest"
         android:layout_alignEnd="@+id/textView2"
         android:layout_marginBottom="73dp"
+        android:layout_marginEnd="-131dp"
+        android:layout_marginLeft="80dp"
         android:ems="10"
         android:hint="@string/debt" />
 
 
     <Button
         android:id="@+id/button_invest"
-        android:layout_width="wrap_content"
+        android:layout_width="214dp"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/amount_topay"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="68dp"
-        android:layout_marginEnd="15dp"
+        android:layout_marginEnd="7dp"
+        android:background="@drawable/button_selector"
+        android:hint="@string/proceed_to_invest"
         android:text="@string/proceed_to_invest"
-        android:hint="@string/proceed_to_invest" />
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
 </RelativeLayout>

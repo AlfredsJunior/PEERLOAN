@@ -9,4 +9,25 @@
     <color name="green_dark">#159204</color>
     <color name="bright_green">#02D8B0</color>
     <color name="button_green">#10a54a</color>
+
+
+
+
+    <!--Alfred added this colours blindly. Alfred is not good with colors-->
+
+    <color name="colorBackground">#ec3237</color>
+    <color name="seafoam">#ffc6f9e5</color>
+    <color name="chartreuse">#b6e9b5</color>
+    <color name="emerald">#a6d9b5</color>
+    <color name="bluegrass">#96c9b5</color>
+    <color name="turquoise">#ff86b9b5</color>
+    <color name="slate">#0575bf</color>
+    <color name="black_semi_transparent">#B2000000</color>
+    <color name="background">#e5e5e5</color>
+    <color name="half_black">#808080</color>
+    <color name="white_pressed">#f1f1f1</color>
+    <color name="pink">#e91e63</color>
+    <color name="pink_pressed">#ec407a</color>
+    <color name="blue_semi_transparent">#805677fc</color>
+    <color name="blue_semi_transparent_pressed">#80738ffe</color>
 </resources>

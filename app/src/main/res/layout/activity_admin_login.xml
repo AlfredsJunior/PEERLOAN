@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:paddingTop="16dp"
+    android:paddingLeft="16dp"
+    android:paddingBottom="16dp"
+    android:paddingRight="16dp"
+    android:background="@drawable/money_love_shape"
     tools:context="com.alfredtechsystems.myapplication2.Admin_login">
 
 
@@ -13,8 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="5dp"
         android:text="@string/app_peer" />
 
     <EditText
@@ -25,37 +28,30 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="53dp"
         android:ems="10"
-        android:hint="@string/app_admin"
-        android:inputType="textPersonName" />
+        android:hint="youremail@gmail.com"
+        android:inputType="textEmailAddress" />
 
-    <EditText
-        android:id="@+id/editText_admin_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText_admin_name"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="37dp"
-        android:ems="10"
-        android:hint="@string/admin_id"
-        android:inputType="number" />
 
     <EditText
         android:id="@+id/editText_adminpassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/editText_admin_id"
-        android:layout_below="@+id/editText_admin_id"
-        android:layout_marginTop="51dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="161dp"
         android:ems="10"
         android:hint="@string/pass"
         android:inputType="textPassword" />
 
     <Button
         android:id="@+id/button_Admin_login"
-        android:layout_width="wrap_content"
+        android:layout_width="215dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="63dp"
-        android:text="@string/lg_btn" />
+
+        android:layout_centerInParent="true"
+        android:background="@drawable/button_selector"
+        android:text="@string/lg_btn"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 </RelativeLayout>

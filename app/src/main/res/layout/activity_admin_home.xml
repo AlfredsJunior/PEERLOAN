@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:paddingTop="16dp"
+    android:paddingLeft="16dp"
+    android:paddingBottom="16dp"
+    android:paddingRight="16dp"
+    android:background="@color/bluegrass"
     tools:context="com.alfredtechsystems.myapplication2.admin_home">
 
 
-    <TextView
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical">
+      <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
         android:layout_marginTop="18dp"
         android:text="@string/app_peer" />
 
@@ -24,6 +33,7 @@
         android:layout_alignEnd="@+id/textView8"
         android:layout_below="@+id/textView8"
         android:padding="8dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="45dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/button_selector"
@@ -42,6 +52,7 @@
         android:layout_marginTop="45dp"
         android:background="@drawable/button_selector"
         android:textColor="@color/white"
+        android:layout_marginLeft="20dp"
         android:textSize="18sp"
         android:textStyle="bold"
         android:padding="8dp"
@@ -54,7 +65,9 @@
         android:layout_below="@+id/button_loners"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="45dp"
+        android:layout_marginLeft="20dp"
         android:background="@drawable/button_selector"
+
         android:text="@string/approve"
         android:textColor="@color/white"
         android:textSize="18sp"
@@ -70,8 +83,12 @@
         android:layout_marginTop="45dp"
         android:background="@drawable/button_selector"
         android:textColor="@color/white"
+        android:layout_marginLeft="20dp"
         android:textSize="18sp"
         android:textStyle="bold"
         android:padding="8dp"
         android:text="@string/students" />
+
+     </LinearLayout>
+
 </RelativeLayout>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/button_green"
     tools:context="com.alfredtechsystems.myapplication2.user_invest">
 
     <TextView
@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:paddingTop="1.5dp"
         android:layout_marginTop="24dp"
         android:text="@string/app_peer" />
 
@@ -23,6 +23,7 @@
         android:layout_below="@+id/textView6"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp"
+       android:layout_marginLeft="80dp"
         android:ems="10"
         android:hint="@string/Invest_Amount"
         android:inputType="number" />
@@ -34,6 +35,7 @@
         android:layout_alignEnd="@+id/edittextAmountToInvest"
         android:layout_below="@+id/edittextAmountToInvest"
         android:layout_marginTop="62dp"
+        android:layout_marginLeft="80dp"
         android:ems="10"
         android:hint="@string/weeks"
         android:inputType="number" />
@@ -45,17 +47,23 @@
         android:layout_below="@+id/editTextInvestweeks"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp"
+        android:layout_marginLeft="80dp"
         android:ems="10"
         android:hint="@string/app_repay"
         tools:ignore="InvalidId" />
 
     <Button
         android:id="@+id/buttonInvest"
-        android:layout_width="wrap_content"
+        android:layout_width="161dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:layout_alignStart="@+id/txtviewAmountTobeRePaid"
-        android:layout_marginBottom="87dp"
-        android:hint="click to invest"/>
-</RelativeLayout>
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:layout_marginLeft="80dp"
+        android:background="@drawable/button_selector"
+        android:hint="click to invest"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+</LinearLayout>
